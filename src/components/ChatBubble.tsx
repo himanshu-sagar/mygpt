@@ -1,12 +1,42 @@
 // src/components/ChatBubble.tsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight, darcula, dark  } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-interface ChatBubbleProps {
-  content: string;
+interface CodeBlockProps {
+  code: string;
 }
 
-const ChatBubble: React.FC<ChatBubbleProps> = ({ content }) => {
-  return <div className="chat-bubble">{content}</div>;
+const CodeBlock = ({code}: CodeBlockProps) => {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (copied) {
+      const timer = setTimeout(() => {
+        setCopied(false);
+      }, 3000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [copied]);
+
+  const handleCopy = () => {
+    setCopied(true);
+  };
+
+  return (
+    <div className="code-block-container">
+      <CopyToClipboard text={code} onCopy={handleCopy}>
+        <button className = "copy-button">{copied ? '📋Copied!' : '📋Copy Code'}</button>
+      </CopyToClipboard>
+      <SyntaxHighlighter style={darcula} language="python">
+        {code}
+      </SyntaxHighlighter>
+    </div>
+  );
 };
 
-export default ChatBubble;
+export default CodeBlock;
