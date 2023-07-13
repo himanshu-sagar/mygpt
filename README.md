@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+# Getting Started with MYGPT App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
@@ -19,14 +18,6 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### My GPT Sample
 
 ![screencapture-localhost-3000-2023-07-13-13_48_00](https://github.com/himanshu-sagar/mygpt/assets/49094337/55868672-615a-40b3-93f4-37aea54aae88)
