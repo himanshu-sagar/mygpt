@@ -29,3 +29,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+![screencapture-localhost-3000-2023-07-13-13_48_00](https://github.com/himanshu-sagar/mygpt/assets/49094337/55868672-615a-40b3-93f4-37aea54aae88)
