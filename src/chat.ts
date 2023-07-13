@@ -2,7 +2,7 @@
 import { OpenAIApi, Configuration, ChatCompletionRequestMessage } from 'openai';
 import { Message } from './App';
 
-const openaiApiKey = process.env.OPENAI_API_KEY || "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"; // Replace with your API key
+const openaiApiKey = process.env.OPENAI_API_KEY; // Replace with your API key
 const openaiConfig = new Configuration(
   {
     apiKey: openaiApiKey
