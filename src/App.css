@@ -7,6 +7,7 @@ body {
   max-width: 750px;
   margin: 0 auto;
   padding: 20px;
+  padding-bottom: 70px; /* Add extra padding to the bottom */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -70,26 +71,28 @@ h1 {
   border-radius: 8px;
 }
 
-.input-box {
-  resize: vertical; 
-  width: 90%;
-  padding: 10px;
-  
-  border-radius: 5px;
-  margin-bottom: 10px;
-  min-height: 40px;
-  height: fit-content;
-}
 
 .input-container {
-  display: flex;
-  align-items: center;
+  max-width: 750px;
+  margin: 0 auto;
   position: fixed;
   bottom: 0;
-  left: 0;
+  display: flex;
   width: 100%;
   height: fit-content;
 }
+
+.input-box {
+  resize: vertical;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  min-height: 60px;
+  height: 100%; /* Set height to 100% to allow vertical expansion */
+  max-height: 200px; /* Set the maximum height to 200px */
+  width: calc(100% - 40px); /* Adjust the width to include padding and margins */
+}
+
 
 .submit-button {
   padding: 10px 25px;
@@ -100,8 +103,8 @@ h1 {
   cursor: pointer;
   font-size: medium;
   position: absolute;
-  top: 50%;
-  right: 10px;
+  top: 45%;
+  right: 25px;
   transform: translateY(-50%);
 }
 
@@ -111,7 +114,7 @@ h1 {
   left: 2px;
   bottom: 2px;
   padding: 4px 8px;
-  background: #95cec5;
+  background-color: #3ba694;
   color: #140202;
   border: 1px solid #333;
   border-radius: 8px;
