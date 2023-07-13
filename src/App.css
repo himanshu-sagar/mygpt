@@ -58,7 +58,7 @@ h1 {
 }
 
 .user {
-  background-color: rgb(31, 126, 150);
+  background-color: rgb(18, 53, 62);
   color:hwb(0 100% 0%);
   border-radius: 8px;
 }
@@ -72,22 +72,23 @@ h1 {
 
 .input-box {
   resize: vertical; 
-  width: 100%;
+  width: 90%;
   padding: 10px;
-
+  
   border-radius: 5px;
   margin-bottom: 10px;
   min-height: 40px;
-  max-height: fit-content;
+  height: fit-content;
 }
 
 .input-container {
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  resize: vertical;
-  overflow: auto;
+  left: 0;
+  width: 100%;
+  height: fit-content;
 }
 
 .submit-button {
@@ -107,7 +108,8 @@ h1 {
 .copy-button {
   position: relative;
   top: 8px;
-  right: 8px;
+  left: 2px;
+  bottom: 2px;
   padding: 4px 8px;
   background: #95cec5;
   color: #140202;
@@ -128,12 +130,14 @@ h1 {
   position: relative;
   border-radius: 10px;
   scrollbar-width: 3px;
+  background-color: #fbf7f7;
 }
 
 .code-block-container pre {
   overflow: auto;
   scrollbar-width:1px;
   border-radius: 10px;
+  
 }
 
 .code-block-container pre::-webkit-scrollbar {

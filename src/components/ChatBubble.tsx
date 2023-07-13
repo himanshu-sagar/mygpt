@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { solarizedlight, darcula, dark  } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {materialDark, vscDarkPlus, twilight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface CodeBlockProps {
   code: string;
@@ -28,11 +28,11 @@ const CodeBlock = ({code}: CodeBlockProps) => {
   };
 
   return (
-    <div className="code-block-container">
+    <div >
       <CopyToClipboard text={code} onCopy={handleCopy}>
         <button className = "copy-button">{copied ? '📋Copied!' : '📋Copy Code'}</button>
       </CopyToClipboard>
-      <SyntaxHighlighter style={darcula} language="python">
+      <SyntaxHighlighter style={vscDarkPlus} language="python">
         {code}
       </SyntaxHighlighter>
     </div>
